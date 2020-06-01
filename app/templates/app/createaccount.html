@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Account Creation - Quick Drop</title>
+  </head>
+
+
+  <body>
+
+    <div id="UUIDsContainer">
+      <div id="publicUUIdContainer">
+        <p id="publicUUID"></p>
+      </div>
+      <div id="privateUUIDContainer">
+        <p onmouseover="switcher()" onmouseout="switcher()" id="privateUUID">*****Hover To Reveal Private UUID*****</p>
+      </div>
+    </div>
+
+
+    <button type="button">Create Account!</button>
+
+  </body>
+
+
+  <script>
+    function createUUID() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+          });
+      }
+
+      privateUUID = createUUID();
+      function switcher(innerHTML) {
+         var x = document.getElementById("privateUUID");
+        if (x.innerHTML === "*****Hover To Reveal Private UUID*****") {
+          x.innerHTML = privateUUID;
+        } else {
+          x.innerHTML = "*****Hover To Reveal Private UUID*****";
+        }
+      }
+
+      function countryGetter(ipaddress) {
+
+      }
+
+
+    document.getElementById("publicUUID").innerHTML = createUUID();
+  </script>
+</html>

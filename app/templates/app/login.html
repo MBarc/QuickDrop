@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>QDLogin</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/login.css' %}" >
+  </head>
+
+<style>
+  body {
+    background: url("/static/app/img/Background.jpg")
+  }
+</style>
+
+  <body>
+    <div class="loginbox">
+      <img src="{% static 'app/img/logo.png' %}" class="avatar">
+        <h1>QuickDrop</h1>
+        <form>
+          <br>
+            <p></p>
+            <input type="text" name="" placeholder="Public UUID">
+            <p></p>
+            <input type="password" name="" placeholder="Private UUID">
+            <input type="submit" name="" value="Login">
+            <br>
+            <a href="createaccount">Create Account</a>
+            <div class="b">
+              <a href="about">About QuickDrop</a>
+            </div>
+        </form>
+    </div>
+  </body>
+</html>
